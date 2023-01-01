@@ -1,0 +1,166 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+body {
+    margin: 0;
+}
+
+.main {
+    text-align: center; 
+    background-color: #FFFFE0; 
+    padding: 25px;
+    font-size: 1.5em;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.main h1 {
+    font-size: 4em;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.main p.open {
+    font-size: 0.8em;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.main p.desc {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+
+.download,
+.coffee {
+  display: inline-block; /* display the buttons as inline blocks */
+  vertical-align: middle; /* align the buttons vertically */
+}
+
+.download {
+  background-color: #FFDD00;
+  color: black;
+  border: none;
+  border-radius: 5px; /* add border-radius to round the corners */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+  margin: 0 auto !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  -o-transition: 0.3s all linear !important;
+  -webkit-transition: 0.3s all linear !important;
+  -moz-transition: 0.3s all linear !important;
+  -ms-transition: 0.3s all linear !important;
+  transition: 0.3s all linear !important;
+}
+
+.bmc-button img{
+    width: 27px !important;
+    margin-bottom: 1px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+  }
+  .bmc-button{
+    line-height: 36px !important;
+    height:37px !important;
+    text-decoration: none !important;
+    display:inline-flex !important;
+    color:black !important;
+    background-color:#FFDD00 !important;
+    border-radius: 3px !important;
+    border: 1px solid transparent !important;
+    padding: 1px 9px !important;font-size: 23px !important;
+    letter-spacing: 0.6px !important;
+    box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    margin: 0 auto !important;
+    font-family:'Cookie', cursive !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -o-transition: 0.3s all linear !important;
+    -webkit-transition: 0.3s all linear !important;
+    -moz-transition: 0.3s all linear !important;
+    -ms-transition: 0.3s all linear !important;
+    transition: 0.3s all linear !important;
+  }
+  .bmc-button:hover, .bmc-button:active, .bmc-button:focus {
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    text-decoration: none !important;
+    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    opacity: 0.85 !important;
+    color:#ffffff !important;
+  }
+
+.download:hover, .download:active, .download:focus {
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    text-decoration: none !important;
+    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    opacity: 0.85 !important;
+    color:#ffffff !important;
+}
+
+.download span {
+    font-size: 14px;
+	display: block;
+	margin-top: 2px;
+}
+
+div {
+  padding: 20px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.features h2 {
+  margin: 15px auto 20px; /* add 20px of top margin and 10px of bottom margin */
+  text-align: center; /* center the heading text */
+  width: 100%; /* set the width to 100% of the div's width */
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 3em;
+}
+
+  
+.features ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* center the list items horizontally within the div */
+  width: 60%; /* reduce the width to 60% */
+  margin: 0 auto; /* center the list horizontally within the div */
+  padding-bottom: 20px;
+}
+
+.features li {
+    display: flex; /* display the list items as flex items */
+    align-items: center; /* align the items vertically within the list items */
+    margin: 5px; /* reduce the margin to 5px */
+    font-size: 1.2em;
+    font-family: 'SF Pro Display', sans-serif;
+    text-align: left; /* align the text to the left */
+    padding-left: 10px; /* add padding to the left of the list items */
+  }
+
+.features img {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 10px; /* add margin to the right of the images */
+    filter: invert(100%);
+}
+
+
+
+footer {
+    background-color: #333;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
