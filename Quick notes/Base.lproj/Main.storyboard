@@ -949,11 +949,11 @@
             <objects>
                 <viewController title="Preferences" storyboardIdentifier="pref-view" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="PreferenceViewController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
                     <customView key="view" id="ZuK-Ma-X1z" customClass="Pre">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="207"/>
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="215"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gu2-3g-RCv">
-                                <rect key="frame" x="148" y="164" width="72" height="23"/>
+                                <rect key="frame" x="148" y="172" width="72" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="Setings" allowsEditingTextAttributes="YES" id="Zb9-g9-nqK">
                                     <font key="font" metaFont="system" size="19"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -961,7 +961,7 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAc-S0-OYi">
-                                <rect key="frame" x="59" y="53" width="249" height="96"/>
+                                <rect key="frame" x="59" y="61" width="249" height="96"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q1I-bV-vy5">
                                         <rect key="frame" x="-2" y="79" width="117" height="18"/>
@@ -1074,8 +1074,55 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGK-ue-Nwx">
+                                <rect key="frame" x="147" y="25" width="73" height="24"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z4I-L9-5S4">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Lb8-5c-E4w"/>
+                                            <constraint firstAttribute="height" constant="24" id="rqU-vF-Ew6"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_github" id="en6-HD-cvr"/>
+                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="puo-Xk-dpR" customClass="HyperlinkTextField" customModule="Quick_notes" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="4" width="45" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Github" id="qq2-Ri-DUM" customClass="H">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="href" value="https://github.com/Nilon123456789/Quick-Notes"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="puo-Xk-dpR" firstAttribute="centerY" secondItem="z4I-L9-5S4" secondAttribute="centerY" id="mx6-lc-OW4"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-z9-Xj1">
+                                <rect key="frame" x="86" y="5" width="195" height="13"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version : 1.0 | Made by Nilon123456789" id="Yp4-ir-fv4">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="QG6-z9-Xj1" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="9Db-BV-5Aq"/>
+                            <constraint firstAttribute="bottom" secondItem="OGK-ue-Nwx" secondAttribute="bottom" constant="25" id="F3C-UI-guY"/>
+                            <constraint firstItem="OGK-ue-Nwx" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="HRh-Lm-Cio"/>
+                            <constraint firstAttribute="bottom" secondItem="QG6-z9-Xj1" secondAttribute="bottom" constant="5" id="O7g-Cv-9y6"/>
                             <constraint firstItem="uAc-S0-OYi" firstAttribute="top" secondItem="Gu2-3g-RCv" secondAttribute="bottom" constant="15" id="XgP-YR-VD9"/>
                             <constraint firstItem="Gu2-3g-RCv" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="mhE-VG-XLH"/>
                             <constraint firstItem="uAc-S0-OYi" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="r1H-Fr-Loa"/>
@@ -1085,12 +1132,14 @@
                     <connections>
                         <outlet property="btnClear" destination="XDN-6P-DDO" id="hjh-Ou-dUO"/>
                         <outlet property="btnShortcut" destination="MFG-gX-uDL" id="4wo-Dk-vb5"/>
+                        <outlet property="btnShowSave" destination="WZP-jD-W9o" id="0s5-S7-4Sh"/>
                         <outlet property="cbkAutoStart" destination="Q1I-bV-vy5" id="9SJ-Qz-0Hu"/>
                         <outlet property="cbkfloatingNote" destination="0CE-UY-SXa" id="gH2-jd-lPO"/>
                         <outlet property="cbksaveOnClose" destination="nvY-W3-BW4" id="sx3-Q1-9az"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="LmW-Ld-BT2"/>
             </objects>
             <point key="canvasLocation" x="74.5" y="670.5"/>
         </scene>
@@ -1145,12 +1194,13 @@
     </scenes>
     <resources>
         <image name="bold" catalog="system" width="11" height="12"/>
+        <image name="ico_github" width="496" height="484"/>
         <image name="italic" catalog="system" width="10" height="12"/>
         <image name="textformat.size.larger" catalog="system" width="11" height="12"/>
         <image name="textformat.size.smaller" catalog="system" width="9" height="9"/>
         <image name="underline" catalog="system" width="11" height="14"/>
         <namedColor name="TextZoneBackround">
-            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
