@@ -24,11 +24,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UserDefaults.standard.register(defaults: [
             UserDefaults.Key.autoStart: false,
             UserDefaults.Key.saveOnClose: true,
-            UserDefaults.Key.floatingNote: true
+            UserDefaults.Key.floatingNote: true,
+            UserDefaults.Key.firstTime: true
         ])
         
         setupHotKey()
         LaunchAtLogin.isEnabled = Settings.autoStart
+        
+        if Settings.firstTime {
+            Util.showPrefWindow()
+            Settings.firstTime = false
+        }
     }
 
 
@@ -40,7 +46,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         super.awakeFromNib()
      
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        statusItem?.button?.title = "note"
+        statusItem?.button?.image = NSImage(named: "StatusBarMenuImage")
+        statusItem?.button?.imagePosition = .imageRight
         statusItem?.menu = menu
     }
     

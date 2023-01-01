@@ -10,7 +10,7 @@ import Foundation
 enum Constant {
     static let appName = "Quick Notes"
     static let launcherAppId = "com.nilon123456789.Quick-Notes"
-    static let fileName = "saveText.rtfd"
+    static let fileName = "savedText.rtfd"
     static let savePath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(".Quick-notes/")
 }
 
