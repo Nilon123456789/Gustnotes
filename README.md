@@ -45,7 +45,7 @@ Via the [release](https://github.com/nilon123456789/Quick-Notes/releases/latest)
 
 ------------
 
-## Upcomming features
+## Upcoming features
 
 - [ ] : Code highlighting
 - [ ] : Translation
