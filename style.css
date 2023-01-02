@@ -151,16 +151,38 @@ div {
     filter: invert(100%);
 }
 
+/* make the screenshot div center the images */
+.screenshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.screenshot img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 5px;
+  filter: invert(0%);
+  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+}
+
 
 
 footer {
-    background-color: #333;
-    font-family: 'SF Pro Display', sans-serif;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
+  background-color: #333;
+  font-family: 'SF Pro Display', sans-serif;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
   
-  footer p {
-    margin: 0;
-  }
+footer p {
+  margin: 0;
+}
