@@ -7,7 +7,7 @@
 <a href="https://www.buymeacoffee.com/nilslahaye" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 25px!important; padding: 5px" ></a>
 </p>
 
-Quick notes is a small app to have an always on hand note window for quick notes taking. With the use of a customisable shortcut you can pop up a note window and direcly start writing your notes with autosave and images support.
+Quick notes is a small app to have an always on hand note window without having an app in the dock for quick notes taking. With the use of a customisable shortcut you can pop up a note window and direcly start writing your notes with autosave and images support.
 
 Quick notes require macOS 10.11 or higher.
 
