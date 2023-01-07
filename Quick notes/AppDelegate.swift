@@ -25,7 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             UserDefaults.Key.autoStart: false,
             UserDefaults.Key.saveOnClose: true,
             UserDefaults.Key.floatingNote: true,
-            UserDefaults.Key.firstTime: true
+            UserDefaults.Key.firstTime: true,
+            UserDefaults.Key.richTextPast: false
         ])
         
         setupHotKey()

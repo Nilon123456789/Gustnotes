@@ -15,6 +15,7 @@ extension UserDefaults {
         static let saveOnClose = "saveOnClose"
         static let floatingNote = "floatingNote"
         static let firstTime = "firstTime"
+        static let richTextPast = "richTextPast"
     }
     
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) { }
@@ -73,6 +74,16 @@ enum Settings {
         
         set {
             UserDefaults.standard.set(newValue, forKey: UserDefaults.Key.firstTime)
+        }
+    }
+    
+    static var richTextPast: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: UserDefaults.Key.richTextPast)
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaults.Key.richTextPast)
         }
     }
     

@@ -17,6 +17,7 @@ class PreferenceViewController: NSViewController {
     @IBOutlet weak var btnClear: NSButton!
     @IBOutlet weak var btnShortcut: NSButton!
     @IBOutlet weak var btnShowSave: NSButton!
+    @IBOutlet weak var btnRichTextPast: NSButton!
     
     public var listening = false {
         didSet {
@@ -34,6 +35,7 @@ class PreferenceViewController: NSViewController {
         cbkAutoStart.state = Settings.autoStart ? .on : .off
         cbksaveOnClose.state = Settings.saveOnClose ? .on : .off
         cbkfloatingNote.state = Settings.floatingNote ? .on : .off
+        btnRichTextPast.state = Settings.richTextPast ? .on : .off
         
         let fileManager = FileManager.default
         let folderURL = Constant.savePath
@@ -57,6 +59,11 @@ class PreferenceViewController: NSViewController {
     @IBAction func FloatingWindowChanged(_ sender: NSButton) {
         Settings.floatingNote = sender.state == .on
         cbkfloatingNote.state = Settings.floatingNote ? .on : .off
+    }
+    
+    @IBAction func RichTextPast(_ sender: NSButton) {
+        Settings.richTextPast = sender.state == .on
+        btnRichTextPast.state = Settings.richTextPast ? .on : .off
     }
     
     // When the set shortcut button is pressed start listening for the new shortcut

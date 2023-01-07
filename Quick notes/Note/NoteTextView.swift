@@ -9,6 +9,8 @@ import Cocoa
 
 class NoteTextView: NSTextView {
     
+    @IBInspectable var defaultTextColor: NSColor = NSColor()
+    
     @IBAction func Bold(_ sender: NSButton) {
         // Get the current font for the selected text or the typingAttributes font if there is no selection
         var currentFont: NSFont
@@ -136,9 +138,24 @@ class NoteTextView: NSTextView {
         }
     }
     @IBAction func  Clear(_ sender: NSButton) {
+        
+        //Delete the save file
+        let fileManager = FileManager.default
+        let fileName = Constant.fileName
+        let savePath = Constant.savePath
+        
+        let fileURL = savePath.appendingPathComponent(fileName)
+        
+        if fileManager.fileExists(atPath: fileURL.path) {
+            Util.deleteFiles(fileURL)
+        }
+        
+        // Empty the text view
         if let textStorage = self.textStorage {
-                let range = NSRange(location: 0, length: textStorage.length)
-                textStorage.replaceCharacters(in: range, with: "")
+            let textView = self
+            let range = NSRange(location: 0, length: textView.string.count)
+            textStorage.replaceCharacters(in: range, with: "")
+            self.textColor = defaultTextColor
         }
     }
     @IBAction func TextColor(_ sender: NSColorWell) {
@@ -162,5 +179,45 @@ class NoteTextView: NSTextView {
         super.draw(dirtyRect)
 
         // Drawing code here.
+    }
+    
+    override func paste(_ sender: Any?) {
+        var previousColor = NSColor() // Previous font color
+        
+        let textStorage = self.textStorage!
+        
+        // Save the current font color
+        let insertionPoint = self.selectedRange().location
+        let index = self.string.index(self.string.startIndex, offsetBy: insertionPoint - 1)
+        let intIndex = self.string.distance(from: self.string.startIndex, to: index)
+
+        // Get the font color of the character before the image
+        var effectiveRange: NSRange = NSRange(location: 0, length: 0)
+        if let fontColor = textStorage.attribute(.foregroundColor, at: intIndex, effectiveRange: &effectiveRange) as? NSColor {
+            previousColor = fontColor
+        } else {
+            previousColor = defaultTextColor
+        }
+        
+        // Paste the contents of the clipboard
+        let pasteBoard = NSPasteboard.general
+        if var pastedString = pasteBoard.string(forType: .string), !pastedString.isEmpty {
+            if Settings.richTextPast {
+                textStorage.replaceCharacters(in: self.selectedRange(), with: pastedString)
+            } else {
+                let plainText = NSAttributedString(string: pastedString)
+                textStorage.replaceCharacters(in: self.selectedRange(), with: plainText)
+            }
+        } else {
+            super.paste(sender)
+            
+            // Set the selection range to the character after the image
+            let insertionPoint = self.selectedRange().upperBound
+            self.setSelectedRange(NSRange(location: insertionPoint, length: 0))
+
+            // Set the font color of the selected text
+            self.typingAttributes[.foregroundColor] = previousColor
+        }
+        
     }
 }

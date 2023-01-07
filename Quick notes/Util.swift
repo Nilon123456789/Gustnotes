@@ -37,4 +37,16 @@ class Util {
         }
     }
     
+    static func deleteFiles(_ fileToDelete: URL) {
+        
+        let deleteAtURL = fileToDelete
+        
+        do {
+            try FileManager.default.removeItem(at: deleteAtURL)
+            print("File deleted : ", deleteAtURL)
+        } catch {
+            print(error)
+        }
+    }
+    
 }

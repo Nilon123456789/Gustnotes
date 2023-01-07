@@ -26,11 +26,12 @@ class NoteViewController: NSViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSText.didChangeNotification, object: textView)
         
+        
         // Load the text from a file if it exists if save on close is enable
         
         let fileURL = savePath.appendingPathComponent(fileName)
         if fileManager.fileExists(atPath: fileURL.path) {
-        if let attributeString = try? NSAttributedString(rtfdFileWrapper: FileWrapper(url: fileURL), documentAttributes: nil) {
+            if let attributeString = try? NSAttributedString(rtfdFileWrapper: FileWrapper(url: fileURL), documentAttributes: nil) {
                 textView.textStorage?.insert(attributeString, at: textView.selectedRange.location)
             }
             print("File loaded")
@@ -55,6 +56,7 @@ class NoteViewController: NSViewController {
         }
         // Backup the old file
         do {
+            Util.deleteFiles(savePath.appendingPathComponent(fileName + ".old"))
             try fileManager.copyItem(at: fileURL, to:
                                         savePath.appendingPathComponent(fileName + ".old"))
         } catch {
