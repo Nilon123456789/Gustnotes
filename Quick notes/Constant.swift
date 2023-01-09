@@ -26,7 +26,7 @@ struct GlobalKeybindPreferences: Codable, CustomStringConvertible {
     let keyCode : UInt32
 
     var description: String {
-        print(keyCode)
+//        print(keyCode)
         var stringBuilder = ""
         if self.function {
             stringBuilder += "Fn"

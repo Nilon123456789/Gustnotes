@@ -34,7 +34,7 @@ class NoteViewController: NSViewController {
             if let attributeString = try? NSAttributedString(rtfdFileWrapper: FileWrapper(url: fileURL), documentAttributes: nil) {
                 textView.textStorage?.insert(attributeString, at: textView.selectedRange.location)
             }
-            print("File loaded")
+//            print("File loaded")
         }
     }
     
@@ -49,9 +49,9 @@ class NoteViewController: NSViewController {
             do {
                 try fileManager.createDirectory(at: savePath, withIntermediateDirectories: true, attributes: nil)
                 fileManager.createFile(atPath: fileURL.path, contents: nil, attributes: nil)
-                print("File created :", fileURL)
+//                print("File created :", fileURL)
             } catch {
-                print("Failed to save text to file:", error)
+//                print("Failed to save text to file:", error)
             }
         }
         // Backup the old file
@@ -60,7 +60,7 @@ class NoteViewController: NSViewController {
             try fileManager.copyItem(at: fileURL, to:
                                         savePath.appendingPathComponent(fileName + ".old"))
         } catch {
-            print("Error copying file: \(error)")
+//            print("Error copying file: \(error)")
         }
         
         // Save the file
@@ -73,7 +73,7 @@ class NoteViewController: NSViewController {
             do {
                 try rtfdData.write(to: fileURL, options: .atomic, originalContentsURL: savePath)
             } catch {
-                print("Faild to write \(error)")
+//                print("Faild to write \(error)")
             }
         }
     }

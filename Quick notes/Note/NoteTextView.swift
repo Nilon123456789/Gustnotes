@@ -10,6 +10,7 @@ import Cocoa
 class NoteTextView: NSTextView {
     
     @IBInspectable var defaultTextColor: NSColor = NSColor()
+    @IBInspectable var defaultBackroundColor: NSColor = NSColor()
     
     @IBAction func Bold(_ sender: NSButton) {
         // Get the current font for the selected text or the typingAttributes font if there is no selection
@@ -156,6 +157,32 @@ class NoteTextView: NSTextView {
             let range = NSRange(location: 0, length: textView.string.count)
             textStorage.replaceCharacters(in: range, with: "")
             self.textColor = defaultTextColor
+            
+            //Remove italic, bold, underline
+            var currentFont: NSFont
+            if let typingAttributesFont = self.typingAttributes[.font] as? NSFont {
+                currentFont = typingAttributesFont
+            } else {
+                currentFont = NSFont.systemFont(ofSize: NSFont.systemFontSize)
+            }
+            let fontDescriptor = currentFont.fontDescriptor
+            let symbolicTraits = fontDescriptor.symbolicTraits
+            let newFont: NSFont
+            
+            var newFontDescriptor = NSFontDescriptor()
+            if (symbolicTraits.contains(.italic)) {
+                newFontDescriptor = fontDescriptor.withSymbolicTraits(symbolicTraits.subtracting(.italic))
+            }
+            if (symbolicTraits.contains(.bold)) {
+                newFontDescriptor = fontDescriptor.withSymbolicTraits(symbolicTraits.subtracting(.bold))
+            }
+            newFont = NSFont(descriptor: newFontDescriptor, size: currentFont.pointSize)!
+            var newTypingAttributes = self.typingAttributes
+            newTypingAttributes[.font] = newFont
+            self.typingAttributes = newTypingAttributes
+            
+            // Remove backround
+            self.backgroundColor = defaultBackroundColor
         }
     }
     @IBAction func TextColor(_ sender: NSColorWell) {
@@ -187,7 +214,10 @@ class NoteTextView: NSTextView {
         let textStorage = self.textStorage!
         
         // Save the current font color
-        let insertionPoint = self.selectedRange().location
+        var insertionPoint = self.selectedRange().location
+        if (insertionPoint <= 0) {
+            insertionPoint = insertionPoint + 1
+        }
         let index = self.string.index(self.string.startIndex, offsetBy: insertionPoint - 1)
         let intIndex = self.string.distance(from: self.string.startIndex, to: index)
 
@@ -201,12 +231,32 @@ class NoteTextView: NSTextView {
         
         // Paste the contents of the clipboard
         let pasteBoard = NSPasteboard.general
-        if var pastedString = pasteBoard.string(forType: .string), !pastedString.isEmpty {
+        if let pastedString = pasteBoard.string(forType: .string), !pastedString.isEmpty {
             if Settings.richTextPast {
-                textStorage.replaceCharacters(in: self.selectedRange(), with: pastedString)
+                let lastCursorPosition = self.selectedRange.location
+                
+                super.paste(sender)
+                
+                let newCursorPosition = self.selectedRange.location
+                
+                let range = NSRange(location: (self.textStorage!.string.count - pastedString.count), length: pastedString.count)
+                var color = self.textStorage!.attribute(.foregroundColor, at: range.location, effectiveRange: nil) as! NSColor
+                
+                if (NSApplication.shared.effectiveAppearance == NSAppearance(named: .darkAqua)) {
+                    
+                    if (Util.isAlmostInvisible(foregroundColor: color, backgroundColor: self.backgroundColor) < 0.5) {
+                        color = defaultTextColor
+                    }
+                } else {
+                    if (Util.isAlmostInvisible(foregroundColor: color, backgroundColor: self.backgroundColor) > 0.5) {
+                        color = defaultTextColor
+                    }
+                }
+                self.textStorage!.beginEditing()
+                self.textStorage!.addAttribute(.foregroundColor, value: color, range: range)
+                self.textStorage!.endEditing()
             } else {
-                let plainText = NSAttributedString(string: pastedString)
-                textStorage.replaceCharacters(in: self.selectedRange(), with: plainText)
+                super.pasteAsPlainText(sender)
             }
         } else {
             super.paste(sender)

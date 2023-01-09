@@ -11,9 +11,9 @@ import LaunchAtLogin
 
 class PreferenceViewController: NSViewController {
     
-    @IBOutlet weak var cbkAutoStart: NSButton!
-    @IBOutlet weak var cbksaveOnClose: NSButton!
-    @IBOutlet weak var cbkfloatingNote: NSButton!
+    @IBOutlet weak var btnAutoStart: NSButton!
+    @IBOutlet weak var btnsaveOnClose: NSButton!
+    @IBOutlet weak var btnfloatingNote: NSButton!
     @IBOutlet weak var btnClear: NSButton!
     @IBOutlet weak var btnShortcut: NSButton!
     @IBOutlet weak var btnShowSave: NSButton!
@@ -32,9 +32,9 @@ class PreferenceViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cbkAutoStart.state = Settings.autoStart ? .on : .off
-        cbksaveOnClose.state = Settings.saveOnClose ? .on : .off
-        cbkfloatingNote.state = Settings.floatingNote ? .on : .off
+        btnAutoStart.state = Settings.autoStart ? .on : .off
+        btnsaveOnClose.state = Settings.saveOnClose ? .on : .off
+        btnfloatingNote.state = Settings.floatingNote ? .on : .off
         btnRichTextPast.state = Settings.richTextPast ? .on : .off
         
         let fileManager = FileManager.default
@@ -48,17 +48,17 @@ class PreferenceViewController: NSViewController {
     
     @IBAction func autoStartChanged(_ sender: NSButton) {
         Settings.autoStart = sender.state == .on
-        cbkAutoStart.state = Settings.autoStart ? .on : .off
+        btnAutoStart.state = Settings.autoStart ? .on : .off
     }
     
     @IBAction func SaveOnCloseChanged(_ sender: NSButton) {
         Settings.saveOnClose = sender.state == .on
-        cbksaveOnClose.state = Settings.saveOnClose ? .on : .off
+        btnsaveOnClose.state = Settings.saveOnClose ? .on : .off
     }
     
     @IBAction func FloatingWindowChanged(_ sender: NSButton) {
         Settings.floatingNote = sender.state == .on
-        cbkfloatingNote.state = Settings.floatingNote ? .on : .off
+        btnfloatingNote.state = Settings.floatingNote ? .on : .off
     }
     
     @IBAction func RichTextPast(_ sender: NSButton) {

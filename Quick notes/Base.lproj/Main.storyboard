@@ -701,7 +701,7 @@
                         <menuItem title="Preferences" id="EIF-Ck-Qhm">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="preference:" target="Voe-Tx-rLC" id="huh-kA-evC"/>
+                                <action selector="preference:" target="Ady-hI-5gd" id="W25-4I-a7p"/>
                             </connections>
                         </menuItem>
                         <menuItem title="Quit" keyEquivalent="q" id="czH-di-vlO">
@@ -896,6 +896,9 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="defaultTextColor">
                                                                 <color key="value" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="defaultBackroundColor">
+                                                                <color key="value" name="TextZoneBackround"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1147,13 +1150,13 @@
                         </constraints>
                     </customView>
                     <connections>
+                        <outlet property="btnAutoStart" destination="Q1I-bV-vy5" id="9SJ-Qz-0Hu"/>
                         <outlet property="btnClear" destination="XDN-6P-DDO" id="hjh-Ou-dUO"/>
                         <outlet property="btnRichTextPast" destination="sJJ-fw-JG5" id="Cpt-kZ-MGq"/>
                         <outlet property="btnShortcut" destination="MFG-gX-uDL" id="4wo-Dk-vb5"/>
                         <outlet property="btnShowSave" destination="WZP-jD-W9o" id="0s5-S7-4Sh"/>
-                        <outlet property="cbkAutoStart" destination="Q1I-bV-vy5" id="9SJ-Qz-0Hu"/>
-                        <outlet property="cbkfloatingNote" destination="0CE-UY-SXa" id="gH2-jd-lPO"/>
-                        <outlet property="cbksaveOnClose" destination="nvY-W3-BW4" id="sx3-Q1-9az"/>
+                        <outlet property="btnfloatingNote" destination="0CE-UY-SXa" id="gH2-jd-lPO"/>
+                        <outlet property="btnsaveOnClose" destination="nvY-W3-BW4" id="sx3-Q1-9az"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
