@@ -215,18 +215,16 @@ class NoteTextView: NSTextView {
         
         // Save the current font color
         var insertionPoint = self.selectedRange().location
-        if (insertionPoint <= 0) {
-            insertionPoint = insertionPoint + 1
-        }
-        let index = self.string.index(self.string.startIndex, offsetBy: insertionPoint - 1)
-        let intIndex = self.string.distance(from: self.string.startIndex, to: index)
-
+        
+        let intIndex = insertionPoint - 1
         // Get the font color of the character before the image
-        var effectiveRange: NSRange = NSRange(location: 0, length: 0)
-        if let fontColor = textStorage.attribute(.foregroundColor, at: intIndex, effectiveRange: &effectiveRange) as? NSColor {
-            previousColor = fontColor
-        } else {
-            previousColor = defaultTextColor
+        if insertionPoint > 0 {
+            var effectiveRange: NSRange = NSRange(location: 0, length: 0)
+            if let fontColor = textStorage.attribute(.foregroundColor, at: insertionPoint - 1, effectiveRange: &effectiveRange) as? NSColor {
+                previousColor = fontColor
+            } else {
+                previousColor = defaultTextColor
+            }
         }
         
         // Paste the contents of the clipboard
