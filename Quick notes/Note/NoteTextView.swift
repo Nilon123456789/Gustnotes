@@ -214,9 +214,8 @@ class NoteTextView: NSTextView {
         let textStorage = self.textStorage!
         
         // Save the current font color
-        var insertionPoint = self.selectedRange().location
-        
-        let intIndex = insertionPoint - 1
+        let insertionPoint = self.selectedRange().location
+    
         // Get the font color of the character before the image
         if insertionPoint > 0 {
             var effectiveRange: NSRange = NSRange(location: 0, length: 0)
@@ -231,17 +230,13 @@ class NoteTextView: NSTextView {
         let pasteBoard = NSPasteboard.general
         if let pastedString = pasteBoard.string(forType: .string), !pastedString.isEmpty {
             if Settings.richTextPast {
-                let lastCursorPosition = self.selectedRange.location
                 
                 super.paste(sender)
-                
-                let newCursorPosition = self.selectedRange.location
                 
                 let range = NSRange(location: (self.textStorage!.string.count - pastedString.count), length: pastedString.count)
                 var color = self.textStorage!.attribute(.foregroundColor, at: range.location, effectiveRange: nil) as! NSColor
                 
                 if (NSApplication.shared.effectiveAppearance == NSAppearance(named: .darkAqua)) {
-                    
                     if (Util.isAlmostInvisible(foregroundColor: color, backgroundColor: self.backgroundColor) < 0.5) {
                         color = defaultTextColor
                     }
@@ -250,9 +245,11 @@ class NoteTextView: NSTextView {
                         color = defaultTextColor
                     }
                 }
-                self.textStorage!.beginEditing()
-                self.textStorage!.addAttribute(.foregroundColor, value: color, range: range)
-                self.textStorage!.endEditing()
+                if (color == defaultTextColor) {
+                    self.textStorage!.beginEditing()
+                    self.textStorage!.addAttribute(.foregroundColor, value: color, range: range)
+                    self.textStorage!.endEditing()
+                }
             } else {
                 super.pasteAsPlainText(sender)
             }
