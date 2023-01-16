@@ -153,9 +153,7 @@ class NoteTextView: NSTextView {
         
         // Empty the text view
         if let textStorage = self.textStorage {
-            let textView = self
-            let range = NSRange(location: 0, length: textView.string.count)
-            textStorage.replaceCharacters(in: range, with: "")
+            self.textStorage?.setAttributedString(NSAttributedString())
             self.textColor = defaultTextColor
             
             //Remove italic, bold, underline
@@ -183,6 +181,7 @@ class NoteTextView: NSTextView {
             
             // Remove backround
             self.backgroundColor = defaultBackroundColor
+            
         }
     }
     @IBAction func TextColor(_ sender: NSColorWell) {

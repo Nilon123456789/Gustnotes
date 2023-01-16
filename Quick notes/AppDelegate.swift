@@ -56,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         didSet {
             guard let hotKey = hotKey else { return }
             
-            hotKey.keyDownHandler = { [weak self] in
+            hotKey.keyDownHandler = {
                 Util.showNoteWindow(closeIfOpen: true)
             }
         }

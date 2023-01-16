@@ -949,8 +949,21 @@
                     </connections>
                 </viewController>
                 <customObject id="cWm-wo-W2C" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="pqJ-xX-fs0">
+                    <items>
+                        <menuItem title="Item 1" id="opo-vH-96b">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 2" id="tgh-nC-YhL">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 3" id="RV0-ks-Tno">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
-            <point key="canvasLocation" x="615" y="884"/>
+            <point key="canvasLocation" x="615" y="946"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="hIz-AP-VOD">
@@ -1130,8 +1143,8 @@
                                 </customSpacing>
                             </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-z9-Xj1">
-                                <rect key="frame" x="87" y="5" width="194" height="13"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version : 1.1 | Made by Nilon123456789" id="Yp4-ir-fv4">
+                                <rect key="frame" x="86" y="5" width="195" height="13"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version : 1.2 | Made by Nilon123456789" id="Yp4-ir-fv4">
                                     <font key="font" metaFont="system" size="10"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1162,7 +1175,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="LmW-Ld-BT2"/>
             </objects>
-            <point key="canvasLocation" x="74.5" y="670.5"/>
+            <point key="canvasLocation" x="75" y="692"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="JhF-Zp-BMO">

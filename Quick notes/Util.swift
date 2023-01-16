@@ -62,9 +62,7 @@ class Util {
         var bb: CGFloat = 0
         var ba: CGFloat = 0
         backgroundColorRGBA.getRed(&br, green: &bg, blue: &bb, alpha: &ba)
-        print(br, bg, bb)
         let distance = sqrt(pow(fr - br, 2) + pow(fg - bg, 2) + pow(fb - bb, 2))
-        print(distance)
         return distance
     }
 
