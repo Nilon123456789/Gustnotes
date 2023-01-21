@@ -36,6 +36,9 @@ class NoteViewController: NSViewController {
             }
 //            print("File loaded")
         }
+        
+        // Set the scale down for images
+        textView.layoutManager?.defaultAttachmentScaling = NSImageScaling.scaleProportionallyDown
     }
     
     @objc func textDidChange(_ notification: Notification) {
