@@ -1,15 +1,15 @@
-<img width="128px" src="https://github.com/Nilon123456789/Quick-Notes/blob/main/Quick%20notes/Assets.xcassets/AppIcon.appiconset/AppIcon258.png?raw=true" alt="Logo" align="left" />
+<img width="128px" src="https://github.com/Nilon123456789/Gustnotes/blob/main/Quick%20notes/Assets.xcassets/AppIcon.appiconset/AppIcon258.png?raw=true" alt="Logo" align="left" />
 
-#  Quick Notes
+#  Gustnotes
 <div>
 
-<a href="https://github.com/nilon123456789/Quick-notes/releases/latest" target="_blank"><img src="https://img.shields.io/github/downloads/nilon123456789/Quick-notes/total.svg" alt="Download" style="height: 25px!important; padding: 5px"></a>
+<a href="https://github.com/nilon123456789/Gustnotes/releases/latest" target="_blank"><img src="https://img.shields.io/github/downloads/nilon123456789/Gustnotes/total.svg" alt="Download" style="height: 25px!important; padding: 5px"></a>
 <a href="https://www.buymeacoffee.com/nilslahaye" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 25px!important; padding: 5px" ></a>
 </p>
 
-Quick notes is a small app to have an always on hand note window without having an app in the dock for quick notes taking. With the use of a customisable shortcut you can pop up a note window and direcly start writing your notes with autosave and images support.
+Gustnotes is a small app to have an always on hand note window without having an app in the dock for Gustnotes taking. With the use of a customisable shortcut you can pop up a note window and direcly start writing your notes with autosave and images support.
 
-Quick notes require macOS 10.11 or higher.
+Gustnotes require macOS 10.11 or higher.
 
 ## Table of content
   * [Features](#features)
@@ -29,7 +29,7 @@ Quick notes require macOS 10.11 or higher.
 
 ## Installation
 
-Via the [release](https://github.com/nilon123456789/Quick-Notes/releases/latest) page
+Via the [release](https://github.com/nilon123456789/Gustnotes/releases/latest) page
 
 ## Setup
 
