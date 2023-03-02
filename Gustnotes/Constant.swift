@@ -1,6 +1,6 @@
 //
 //  Constant.swift
-//  Quick notes
+//  Gustnotes
 //
 //  Created by Nils Lahaye on 2022-12-15.
 //
@@ -8,10 +8,10 @@
 import Foundation
 
 enum Constant {
-    static let appName = "Quick Notes"
-    static let launcherAppId = "com.nilon123456789.Quick-Notes"
+    static let appName = "Gustnotes"
+    static let launcherAppId = "com.nilon123456789.Gustnotes"
     static let fileName = "savedText.rtfd"
-    static let savePath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(".Quick-notes/")
+    static let savePath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(".Gustnotes/")
 }
 
 struct GlobalKeybindPreferences: Codable, CustomStringConvertible {

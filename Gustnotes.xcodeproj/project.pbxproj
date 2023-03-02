@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C025DEB2297CA34C00CD8270 /* NoteTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025DEB1297CA34C00CD8270 /* NoteTextStorage.swift */; };
 		C0C0B5F1294B611C000BF2FD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B5F0294B611C000BF2FD /* Constant.swift */; };
 		C0C0B5F4294B6B4A000BF2FD /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = C0C0B5F3294B6B4A000BF2FD /* HotKey */; };
 		C0C0B5F6294BC17D000BF2FD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B5F5294BC17D000BF2FD /* Settings.swift */; };
@@ -27,17 +28,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C025DEB1297CA34C00CD8270 /* NoteTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTextStorage.swift; sourceTree = "<group>"; };
 		C0C0B5F0294B611C000BF2FD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C0C0B5F5294BC17D000BF2FD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C0D58329295F9FBB006BAF1C /* NoteTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTextView.swift; sourceTree = "<group>"; };
-		C0D5832B296097AC006BAF1C /* Quick-notes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Quick-notes-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C0D5832B296097AC006BAF1C /* Gustnotes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gustnotes-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C0D5833229615E2D006BAF1C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
-		C0DBB9DC294A95FD0074FB73 /* Quick notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DBB9DC294A95FD0074FB73 /* Gustnotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gustnotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DBB9DF294A95FD0074FB73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0DBB9E1294A95FD0074FB73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0DBB9E3294A96010074FB73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0DBB9E6294A96010074FB73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0DBB9E8294A96010074FB73 /* Quick_notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quick_notes.entitlements; sourceTree = "<group>"; };
+		C0DBB9E8294A96010074FB73 /* Gustnotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gustnotes.entitlements; sourceTree = "<group>"; };
 		C0DD487F294AA0DE0017D07A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		C0DD4884294AA2320017D07A /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		C0DD4886294AA5A00017D07A /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 		C0DBB9D3294A95FD0074FB73 = {
 			isa = PBXGroup;
 			children = (
-				C0DBB9DE294A95FD0074FB73 /* Quick notes */,
+				C0DBB9DE294A95FD0074FB73 /* Gustnotes */,
 				C0DBB9DD294A95FD0074FB73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,15 +73,15 @@
 		C0DBB9DD294A95FD0074FB73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0DBB9DC294A95FD0074FB73 /* Quick notes.app */,
+				C0DBB9DC294A95FD0074FB73 /* Gustnotes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0DBB9DE294A95FD0074FB73 /* Quick notes */ = {
+		C0DBB9DE294A95FD0074FB73 /* Gustnotes */ = {
 			isa = PBXGroup;
 			children = (
-				C0D5832B296097AC006BAF1C /* Quick-notes-Info.plist */,
+				C0D5832B296097AC006BAF1C /* Gustnotes-Info.plist */,
 				C0DBB9DF294A95FD0074FB73 /* AppDelegate.swift */,
 				C0C0B5F0294B611C000BF2FD /* Constant.swift */,
 				C0DBB9E1294A95FD0074FB73 /* ViewController.swift */,
@@ -89,10 +91,10 @@
 				C0DD4883294AA1570017D07A /* Preference */,
 				C0DD487F294AA0DE0017D07A /* Util.swift */,
 				C0DD488A294AC0000017D07A /* AllNotes */,
-				C0DBB9E8294A96010074FB73 /* Quick_notes.entitlements */,
+				C0DBB9E8294A96010074FB73 /* Gustnotes.entitlements */,
 				C0C0B5F5294BC17D000BF2FD /* Settings.swift */,
 			);
-			path = "Quick notes";
+			path = Gustnotes;
 			sourceTree = "<group>";
 		};
 		C0DD4883294AA1570017D07A /* Preference */ = {
@@ -120,6 +122,7 @@
 				C0DD488F294AC7660017D07A /* NoteWindowController.swift */,
 				C0DD4891294AC77C0017D07A /* NoteViewController.swift */,
 				C0D58329295F9FBB006BAF1C /* NoteTextView.swift */,
+				C025DEB1297CA34C00CD8270 /* NoteTextStorage.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -127,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0DBB9DB294A95FD0074FB73 /* Quick notes */ = {
+		C0DBB9DB294A95FD0074FB73 /* Gustnotes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0DBBA01294A96020074FB73 /* Build configuration list for PBXNativeTarget "Quick notes" */;
+			buildConfigurationList = C0DBBA01294A96020074FB73 /* Build configuration list for PBXNativeTarget "Gustnotes" */;
 			buildPhases = (
 				C0DBB9D8294A95FD0074FB73 /* Sources */,
 				C0DBB9D9294A95FD0074FB73 /* Frameworks */,
@@ -140,13 +143,13 @@
 			);
 			dependencies = (
 			);
-			name = "Quick notes";
+			name = Gustnotes;
 			packageProductDependencies = (
 				C0C0B5F3294B6B4A000BF2FD /* HotKey */,
 				C0D5832F29611502006BAF1C /* LaunchAtLogin */,
 			);
 			productName = "Quick notes";
-			productReference = C0DBB9DC294A95FD0074FB73 /* Quick notes.app */;
+			productReference = C0DBB9DC294A95FD0074FB73 /* Gustnotes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +167,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0DBB9D7294A95FD0074FB73 /* Build configuration list for PBXProject "Quick notes" */;
+			buildConfigurationList = C0DBB9D7294A95FD0074FB73 /* Build configuration list for PBXProject "Gustnotes" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -181,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0DBB9DB294A95FD0074FB73 /* Quick notes */,
+				C0DBB9DB294A95FD0074FB73 /* Gustnotes */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +240,7 @@
 				C0D5833329615E2D006BAF1C /* HyperlinkTextField.swift in Sources */,
 				C0DD4889294ABFFC0017D07A /* AllNotesWindowController.swift in Sources */,
 				C0C0B5F6294BC17D000BF2FD /* Settings.swift in Sources */,
+				C025DEB2297CA34C00CD8270 /* NoteTextStorage.swift in Sources */,
 				C0DD4890294AC7660017D07A /* NoteWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,16 +381,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Quick notes/Quick_notes.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Gustnotes/Gustnotes.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9FH43MP52R;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Quick-notes-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Quick Notes";
+				INFOPLIST_FILE = "Gustnotes-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Gustnotes;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Nils Lahaye";
@@ -398,7 +403,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "nilon123456789.Quick-notes";
+				PRODUCT_BUNDLE_IDENTIFIER = nilon123456789.Gustnotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -412,16 +417,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Quick notes/Quick_notes.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Gustnotes/Gustnotes.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9FH43MP52R;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Quick-notes-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Quick Notes";
+				INFOPLIST_FILE = "Gustnotes-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Gustnotes;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Nils Lahaye";
@@ -433,7 +439,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "nilon123456789.Quick-notes";
+				PRODUCT_BUNDLE_IDENTIFIER = nilon123456789.Gustnotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -444,7 +450,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0DBB9D7294A95FD0074FB73 /* Build configuration list for PBXProject "Quick notes" */ = {
+		C0DBB9D7294A95FD0074FB73 /* Build configuration list for PBXProject "Gustnotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0DBB9FF294A96020074FB73 /* Debug */,
@@ -453,7 +459,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0DBBA01294A96020074FB73 /* Build configuration list for PBXNativeTarget "Quick notes" */ = {
+		C0DBBA01294A96020074FB73 /* Build configuration list for PBXNativeTarget "Gustnotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0DBBA02294A96020074FB73 /* Debug */,

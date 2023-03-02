@@ -1,6 +1,6 @@
 //
 //  HyperlinkTextField.swift
-//  Quick notes
+//  Gustnotes
 //
 //  Created by Nils Lahaye on 2023-01-01.
 //

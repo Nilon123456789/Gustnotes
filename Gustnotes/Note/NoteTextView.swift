@@ -1,6 +1,6 @@
 //
 //  NoteTextView.swift
-//  Quick notes
+//  Gustnotes
 //
 //  Created by Nils Lahaye on 2022-12-30.
 //
@@ -152,7 +152,7 @@ class NoteTextView: NSTextView {
         }
         
         // Empty the text view
-        if let textStorage = self.textStorage {
+        if self.textStorage != nil {
             self.textStorage?.setAttributedString(NSAttributedString())
             self.textColor = defaultTextColor
             

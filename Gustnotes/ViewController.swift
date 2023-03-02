@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Quick notes
+//  Gustnotes
 //
 //  Created by Nils Lahaye on 2022-12-14.
 //
