@@ -1,4 +1,4 @@
-<img width="128px" src="https://github.com/Nilon123456789/Gustnotes/blob/main/Quick%20notes/Assets.xcassets/AppIcon.appiconset/AppIcon258.png?raw=true" alt="Logo" align="left" />
+<img width="128px" src="https://github.com/Nilon123456789/Gustnotes/blob/main/Gustnotes/Assets.xcassets/AppIcon.appiconset/AppIcon258.png?raw=true" alt="Logo" align="left" />
 
 #  Gustnotes
 <div>
