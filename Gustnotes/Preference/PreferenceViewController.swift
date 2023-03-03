@@ -18,6 +18,7 @@ class PreferenceViewController: NSViewController {
     @IBOutlet weak var btnShortcut: NSButton!
     @IBOutlet weak var btnShowSave: NSButton!
     @IBOutlet weak var btnRichTextPast: NSButton!
+    @IBOutlet weak var versiontxt: NSTextField!
     
     public var listening = false {
         didSet {
@@ -41,6 +42,11 @@ class PreferenceViewController: NSViewController {
         let folderURL = Constant.savePath
         if !fileManager.fileExists(atPath: folderURL.path) {
             btnShowSave.isEnabled = false
+        }
+        
+        // Set text field to app version
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            versiontxt.stringValue = version
         }
         
         loadHotkey()

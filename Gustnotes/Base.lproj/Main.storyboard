@@ -677,7 +677,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Quick_notes" customModuleProvider="target">
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Gustnotes" customModuleProvider="target">
                     <connections>
                         <outlet property="menu" destination="A3R-Fk-0Wm" id="6Am-MA-lrB"/>
                     </connections>
@@ -717,7 +717,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="pref-win" showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="PreferenceWindowController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="pref-win" showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="PreferenceWindowController" customModule="Gustnotes" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Gustnotes" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="Prefer">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <rect key="contentRect" x="644" y="286" width="480" height="270"/>
@@ -737,7 +737,7 @@
         <!--Window Controller-->
         <scene sceneID="qLB-5y-G8V">
             <objects>
-                <windowController storyboardIdentifier="note-win" showSeguePresentationStyle="single" id="ZOy-b2-aYW" customClass="NoteWindowController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="note-win" showSeguePresentationStyle="single" id="ZOy-b2-aYW" customClass="NoteWindowController" customModule="Gustnotes" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" identifier="note-win" title="Note" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="YwY-Co-vbP">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" rightStrut="YES" topStrut="YES"/>
@@ -763,7 +763,7 @@
         <!--Note View Controller-->
         <scene sceneID="6qw-AW-7Wn">
             <objects>
-                <viewController showSeguePresentationStyle="single" id="UEK-Hu-7CD" customClass="NoteViewController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController showSeguePresentationStyle="single" id="UEK-Hu-7CD" customClass="NoteViewController" customModule="Gustnotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="dW2-kx-wYL">
                         <rect key="frame" x="0.0" y="0.0" width="392" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -885,7 +885,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="568"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView wantsLayer="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="bar" incrementalSearchingEnabled="YES" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" allowsImageEditing="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" grammarChecking="YES" smartInsertDelete="YES" id="J3h-sy-wUp" customClass="NoteTextView" customModule="Quick_notes" customModuleProvider="target">
+                                                    <textView wantsLayer="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="bar" incrementalSearchingEnabled="YES" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" allowsImageEditing="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" grammarChecking="YES" smartInsertDelete="YES" id="J3h-sy-wUp" customClass="NoteTextView" customModule="Gustnotes" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="390" height="568"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -968,7 +968,7 @@
         <!--Preferences-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="Preferences" storyboardIdentifier="pref-view" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="PreferenceViewController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Preferences" storyboardIdentifier="pref-view" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="PreferenceViewController" customModule="Gustnotes" customModuleProvider="target" sceneMemberID="viewController">
                     <customView key="view" id="ZuK-Ma-X1z" customClass="Pre">
                         <rect key="frame" x="0.0" y="0.0" width="367" height="250"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -986,7 +986,7 @@
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q1I-bV-vy5">
                                         <rect key="frame" x="-2" y="103" width="117" height="18"/>
-                                        <buttonCell key="cell" type="check" title="Open with mac" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Dt9-VU-h2Q">
+                                        <buttonCell key="cell" type="check" title="Open with mac" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Dt9-VU-h2Q">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -1118,7 +1118,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_github" id="en6-HD-cvr"/>
                                     </imageView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="puo-Xk-dpR" customClass="HyperlinkTextField" customModule="Quick_notes" customModuleProvider="target">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="puo-Xk-dpR" customClass="HyperlinkTextField" customModule="Gustnotes" customModuleProvider="target">
                                         <rect key="frame" x="30" y="4" width="45" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Github" id="qq2-Ri-DUM" customClass="H">
                                             <font key="font" metaFont="system"/>
@@ -1142,9 +1142,28 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-z9-Xj1">
-                                <rect key="frame" x="86" y="5" width="195" height="13"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version : 1.2 | Made by Nilon123456789" id="Yp4-ir-fv4">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="P9S-IR-COA">
+                                <rect key="frame" x="81" y="4" width="49" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version : " id="HHe-kZ-T9H">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="pB6-Z6-1f3">
+                                <rect key="frame" x="128" y="4" width="24" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="0.0" id="BvL-CH-Woi">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="MOn-Mo-tJz">
+                                <rect key="frame" x="150" y="4" width="137" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title=" | Made by Nilon123456789" id="G0v-7e-bSo">
                                     <font key="font" metaFont="system" size="10"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1152,10 +1171,8 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="QG6-z9-Xj1" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="9Db-BV-5Aq"/>
                             <constraint firstAttribute="bottom" secondItem="OGK-ue-Nwx" secondAttribute="bottom" constant="25" id="F3C-UI-guY"/>
                             <constraint firstItem="OGK-ue-Nwx" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="HRh-Lm-Cio"/>
-                            <constraint firstAttribute="bottom" secondItem="QG6-z9-Xj1" secondAttribute="bottom" constant="5" id="O7g-Cv-9y6"/>
                             <constraint firstItem="uAc-S0-OYi" firstAttribute="top" secondItem="Gu2-3g-RCv" secondAttribute="bottom" constant="15" id="XgP-YR-VD9"/>
                             <constraint firstItem="Gu2-3g-RCv" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="mhE-VG-XLH"/>
                             <constraint firstItem="uAc-S0-OYi" firstAttribute="centerX" secondItem="ZuK-Ma-X1z" secondAttribute="centerX" id="r1H-Fr-Loa"/>
@@ -1170,17 +1187,18 @@
                         <outlet property="btnShowSave" destination="WZP-jD-W9o" id="0s5-S7-4Sh"/>
                         <outlet property="btnfloatingNote" destination="0CE-UY-SXa" id="gH2-jd-lPO"/>
                         <outlet property="btnsaveOnClose" destination="nvY-W3-BW4" id="sx3-Q1-9az"/>
+                        <outlet property="versiontxt" destination="pB6-Z6-1f3" id="i8u-l8-9Sm"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="LmW-Ld-BT2"/>
             </objects>
-            <point key="canvasLocation" x="75" y="692"/>
+            <point key="canvasLocation" x="74.5" y="692"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="JhF-Zp-BMO">
             <objects>
-                <windowController storyboardIdentifier="all-notes-win" showSeguePresentationStyle="single" id="FAQ-8l-OSL" customClass="AllNotesWindowController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="all-notes-win" showSeguePresentationStyle="single" id="FAQ-8l-OSL" customClass="AllNotesWindowController" customModule="Gustnotes" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="All Notes" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="DiU-XW-H7q">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <rect key="contentRect" x="245" y="301" width="480" height="270"/>
@@ -1205,7 +1223,7 @@
         <scene sceneID="jhs-Lv-TbK">
             <objects>
                 <customObject id="6pk-Cw-5Df" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="bzz-LK-l5E" customClass="AllNotesViewController" customModule="Quick_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bzz-LK-l5E" customClass="AllNotesViewController" customModule="Gustnotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="GvY-1T-qWo">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
