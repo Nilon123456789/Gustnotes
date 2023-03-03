@@ -52,6 +52,6 @@ Via the [release](https://github.com/nilon123456789/Gustnotes/releases/latest) p
 
 ## Contribution
 
-If you wish to contribute don't esitated to make a pull requeste
+If you wish to contribute don't hesitate to make a pull requeste
 
 
