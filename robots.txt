@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nilon123456789.github.io/Gustnotes/sitemap.xml
